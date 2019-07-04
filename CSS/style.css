@@ -25,6 +25,7 @@
 } */
 .navbar {
     font-size: 1.25em;
+    z-index:1;
 }
 
 .main-nav {
@@ -64,44 +65,6 @@ nav.navbar{
 
 .active {
     display: block;
-}
-
-@media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding-bottom: 0;
-        height: 70px;
-        align-items: center;
-    }
-
-    .main-nav {
-        display: flex;
-        margin-right: 30px;
-        flex-direction: row;
-        justify-content: flex-end;
-    }
-
-    .main-nav li {
-        margin: 0;
-    }
-
-    .nav-links {
-        margin-left: 40px;
-    }
-
-    .logo {
-        margin-top: 0;
-    }
-
-    .navbar-toggle {
-        display: none;
-    }
-
-    .logo:hover,
-    .nav-links:hover {
-        color: rgba(255, 255, 255, 1);
-    }
 }
 #topNav ul{
     color:darkred;
@@ -217,3 +180,133 @@ span > img{
     /* padding:1%; */
     border-radius:50%;
 }
+@media screen and (max-width: 1000px){
+    #contentContainer{
+        width:90%;
+    }
+    .navbar{
+        word-wrap: none;
+    }
+
+}
+@media screen and (max-width: 800px){
+    .about{
+        background-size: 100% 5%;
+        margin:auto;
+    }
+    .navbar{
+        word-wrap: none;
+    }
+    #aboutMainContainer{
+        flex-direction:column;
+    }
+    #aboutSubContainer1{
+        width:100%;
+    }
+    #aboutSubContainer2{
+        width:90%;
+    }
+    #contentContainer{
+        width:90%;
+    }
+    .navbar{
+        word-wrap: none;
+    }
+    #wineImgBanner{
+        margin-left:5%;
+    }
+    nav ~ h1 {
+        margin-top:40%;
+    }
+    #cardHolders{
+        flex-wrap:wrap;
+        margin-left:5%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about{
+        background-size: 100% 5%;
+        margin:auto;
+    }
+    span{
+        width:50%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+        word-wrap: nowrap;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+        z-index:1;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .nav-links {
+        margin-left: 40px;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+    @media screen and (max-width: 700px) {
+        .navbar{
+            width:100vw;
+        }
+        .navbar > ul > li{
+            background-color:white;
+            width:100%;
+            margin:0;
+            padding: 1.5%;
+            border-bottom: 1px solid darkred;
+        }
+        .home{
+            background-size: 100% 5%;
+            margin:auto;
+        }
+        .about{
+            background-size: 100% 5%;
+            margin:auto;
+        }
+        #contentContainer{
+            width:100%;
+        }
+        #wineImgBanner{
+            margin-left:3%;
+        }
+        #FavoriteWineContainer{
+            flex-direction: column;
+            width:100vw;
+        }
+        .indFavWineContainer{
+            /* padding-left:5%; */
+            width:90vw;
+    }
+    footer{
+        padding-left: 5%;
+    }
+}
+
