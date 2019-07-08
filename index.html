@@ -5,7 +5,321 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <style>
+    .home{
+    display:flex;
+    /* width:100%; */
+    flex-direction:column;
+    justify-content:center;
+    margin:auto;
+    font-family:sans-serif;
+    background-image: url('../images/bg-1.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 25%;
+}
+.about{
+    display:flex;
+    /* width:100%; */
+    flex-direction:column;
+    justify-content:center;
+    margin:auto;
+    font-family:sans-serif;
+    background-image: url('../images/bg-inner.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 15%;
+}
+/* #topNav{
+ width:100%;
+} */
+.navbar {
+    font-size: 1.25em;
+    z-index:1;
+}
+
+.main-nav {
+    list-style-type: none;
+    display: none;
+}
+nav.navbar{
+    padding-bottom: 30%;
+}
+.nav-links,
+.logo {
+    color:darkred;
+    text-decoration: none;
+    /* color: rgba(255, 255, 255, 0.7); */
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+.logo {
+    display: inline-block;
+    font-size: 22px;
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+.navbar-toggle {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 24px;
+}
+
+.active {
+    display: block;
+}
+#topNav ul{
+    color:darkred;
+    display:flex;
+    flex-direction:row;
+    justify-content: flex-end;
+}
+#topNav ul li{ 
+   list-style-type: none;
+   padding-left:2.5%;
+   text-overflow: clip;
+}
+#topNav ul li:first-of-type{
+  color:black;
+  margin-right:50%;
+}
+#contentContainer{
+    display:flex;
+    width:80%;
+    flex-direction:column;
+    justify-content:center;
+    margin:auto;
+}
+#wineImgBanner{
+position:absolute;
+width:cover;
+top:15%;
+min-height:15vh;
+min-width:80vw;
+}
+nav ~ h1{
+    margin-top:20%;
+}
+h1{
+    text-align:center;
+    color:darkred;
+    margin-bottom:0;
+    font-weight:lighter;
+}
+h1 ~ p{
+    width:80%;
+    margin:1.5% auto 2.5% auto;
+}
+#cardHolders{
+    display:flex;
+    flex-direction:row;
+}
+.card{
+    max-width:300px;
+    margin-right:2%;
+}
+.card:last-of-type{
+    margin-right:0;
+}
+img{
+    max-width:300px;
+}
+#favWineBkgrdContainer{
+background-color:lightgrey;
+}
+#FavoriteWineContainer{
+    width:80%;
+    margin:auto;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+.indFavWineContainer{
+    max-width:500px;
+    width:30%;
+}
+footer{
+    background-color:grey;
+    color:darkred;
+    padding-top:5%;
+    padding-left:10%;
+}
+#aboutMainContainer{
+    display:flex;
+    flex-direction: row;
+    width:80%;
+    margin:auto;
+}
+#aboutSubContainer1{
+    width:60%;
+}
+#aboutSubContainer2{
+    width:40%;
+}
+#aboutSubContainer1 > h3{
+    margin-left:10%;
+}
+.awardsContainer{
+    display:flex;
+    flex-direction:column;
+    padding:1%;
+    border: 1px solid grey; 
+    margin:auto auto 5% 10%;
+    width:80%;
+}
+.awardsContainer > h4{
+    padding-left:1%;
+}
+span{
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+}
+span > img{
+    width:1%;
+    max-width:60px;
+    height:1%;
+    /* padding:1%; */
+    border-radius:50%;
+}
+@media screen and (max-width: 1000px){
+    #contentContainer{
+        width:90%;
+    }
+    .navbar{
+        word-wrap: none;
+    }
+
+}
+@media screen and (max-width: 800px){
+    .about{
+        background-size: 100% 5%;
+        margin:auto;
+    }
+    .navbar{
+        word-wrap: none;
+    }
+    #aboutMainContainer{
+        flex-direction:column;
+    }
+    #aboutSubContainer1{
+        width:100%;
+    }
+    #aboutSubContainer2{
+        width:90%;
+    }
+    #contentContainer{
+        width:90%;
+    }
+    .navbar{
+        word-wrap: none;
+    }
+    #wineImgBanner{
+        margin-left:5%;
+    }
+    nav ~ h1 {
+        margin-top:40%;
+    }
+    #cardHolders{
+        flex-wrap:wrap;
+        margin-left:5%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .about{
+        background-size: 100% 5%;
+        margin:auto;
+    }
+    span{
+        width:50%;
+        display:flex;
+        flex-wrap:wrap;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+        word-wrap: nowrap;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+        z-index:1;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
+
+    .nav-links {
+        margin-left: 40px;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+
+    .navbar-toggle {
+        display: none;
+    }
+
+    .logo:hover,
+    .nav-links:hover {
+        color: rgba(255, 255, 255, 1);
+    }
+}
+    @media screen and (max-width: 700px) {
+        .navbar{
+            width:100vw;
+        }
+        .navbar > ul > li{
+            background-color:white;
+            width:100%;
+            margin:0;
+            padding: 1.5%;
+            border-bottom: 1px solid darkred;
+        }
+        .home{
+            background-size: 100% 5%;
+            margin:auto;
+        }
+        .about{
+            background-size: 100% 5%;
+            margin:auto;
+        }
+        #contentContainer{
+            width:100%;
+        }
+        #wineImgBanner{
+            margin-left:3%;
+        }
+        #FavoriteWineContainer{
+            flex-direction: column;
+            width:100vw;
+        }
+        .indFavWineContainer{
+            /* padding-left:5%; */
+            width:90vw;
+    }
+    footer{
+        padding-left: 5%;
+    }
+}
+
+</style>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
